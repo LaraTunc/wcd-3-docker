@@ -29,7 +29,7 @@ ansible-playbook setup.yml
 
 5. You should see a simple React application with the message Lara's React App.
 
-App Screenshot
+<img src="/public/app_screenshot.png" height=250>
 
 6. To tear down the provisioned resources, run the following Ansible playbook (destroy.yml). Make sure to replace the resource IDs with your own:
 
