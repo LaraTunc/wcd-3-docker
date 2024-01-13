@@ -10,28 +10,37 @@ Explore the Docker Hub repository for the containerized React application [here]
 
 Follow these steps to set up and run the project:
 
-1. Navigate to the "ansible" directory using the command:
+1. **Navigate to the "ansible" directory**
 
 ```sh
 cd ansible
 ```
 
-2. Execute the Ansible playbook (setup.yml) to create essential AWS infrastructure components, including a VPC, public subnet, IGW, route table, security group, and an EC2 instance in your AWS profile. Ensure Ansible is installed before running this command.
+2.  **Install Ansible**
+
+    Ensure Ansible is installed on your system. If not, you can follow the official [Ansible Installation Guide](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html).
+
+3.  **Execute the Ansible playbook**
+    Create essential AWS infrastructure components, including a VPC, public subnet, IGW, route table, security group, and an EC2 instance in your AWS profile. Ensure Ansible is installed before running this command.
 
 ```sh
 ansible-playbook setup.yml
 ```
 
-3. Retrieve the Public IPv4 address of the newly created EC2 instance in your AWS account. The instance should be named my_ec2.
+4. **Retrieve the Public IPv4 address of EC2**
+   The instance should be named my_ec2.
 
-4. Open your web browser and enter the following URL, replacing <public-ipv4-address-of-your-instance> with the actual Public IPv4 address of your EC2 instance:
+5. **Run on Browser**
+   Open your web browser and enter the following URL, replacing <public-ipv4-address-of-your-instance> with the actual Public IPv4 address of your EC2 instance:
    `http://<public-ipv4-address-of-your-instance>:3000`
 
-5. You should see a simple React application with the message Lara's React App.
+6. **Voila 🎉**
+   You should see a simple React application with the message Lara's React App.
 
 <img src="/public/app_screenshot.png" height=250>
 
-6. To tear down the provisioned resources, run the following Ansible playbook (destroy.yml). Make sure to replace the resource IDs with your own:
+7. **Destroy**
+   To tear down the provisioned resources, run the following Ansible playbook (destroy.yml). Make sure to replace the resource IDs with your own:
 
 ```sh
 ansible-playbook destroy.yml
@@ -48,19 +57,14 @@ $ yarn
 $ yarn start
 ```
 
-# Github repo
+## Additional Resources
 
-https://github.com/LaraTunc/wcd-3-docker
-
-# Docker hub repo
-
-https://hub.docker.com/r/laratunc/my-app
-
-## Docs Used
-
-- Ansible: https://docs.ansible.com/ansible/latest/index.html
-- Docker get started: https://docs.docker.com/get-started/
-- Docker multi-platform images: https://docs.docker.com/build/building/multi-platform/
-- Docker on ec2: https://www.workfall.com/learning/blog/how-to-install-and-run-docker-containers-on-amazon-ec2-instance/
+- [GitHub Repository](https://github.com/LaraTunc/wcd-3-docker)
+- [Docker Hub Repository](https://hub.docker.com/r/laratunc/my-app)
+- [Docs Used](#)
+  - [Ansible Documentation](https://docs.ansible.com/ansible/latest/index.html)
+  - [Docker Documentation](https://docs.docker.com/get-started/)
+  - [Docker Multi-platform Images](https://docs.docker.com/build/building/multi-platform/)
+  - [Docker on EC2](https://www.workfall.com/learning/blog/how-to-install-and-run-docker-containers-on-amazon-ec2-instance/)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
